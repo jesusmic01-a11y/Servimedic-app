@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVIMEDIC Inicio</title>
+    <style>
+        :root {
+            --primario: #2ecc71; /* El verde de tu logo */
+            --fondo: #f4f7f6;
+            --texto: #333;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--fondo);
+            margin: 0;
+            padding-bottom: 70px; /* Espacio para el menú inferior */
+        }
+
+        /* Barra Superior */
+        .header {
+            background-color: white;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--primario);
+        }
+
+        .logo { height: 40px; }
+
+        /* Cuadrícula de Botones */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+            gap: 12px;
+            padding: 15px;
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s;
+        }
+
+        .menu-item:active { transform: scale(0.95); }
+
+        .menu-item img {
+            width: 100%;
+            height: 110px;
+            object-fit: cover; /* Mantiene la imagen centrada y recortada */
+        }
+
+        .menu-item span {
+            padding: 10px 5px;
+            font-size: 14px;
+            font-weight: bold;
+            color: var(--texto);
+        }
+
+        /* Menú Inferior (Tab Bar) */
+        .tab-bar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #40e0d0; /* El color turquesa de tu imagen */
+            display: flex;
+            justify-content: space-around;
+            padding: 12px 0;
+        }
+
+        .tab-item { color: white; font-size: 24px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="tu-logo-aqui.png" alt="SERVIMEDIC" class="logo">
+        <div class="user-icon">🔔 👤</div>
+    </div>
+
+    <div class="menu-grid">
+        <div class="menu-item" onclick="location.href='centro-medico.html'">
+            <img src="https://via.placeholder.com/150" alt="Centro">
+            <span>Centro Médico</span>
+        </div>
+
+        <div class="menu-item" onclick="location.href='domicilio.html'">
+            <img src="https://via.placeholder.com/150" alt="Domicilio">
+            <span>Dr. / Enf. a Domicilio</span>
+        </div>
+
+        <div class="menu-item">
+            <img src="https://via.placeholder.com/150" alt="Especialistas">
+            <span>Especialistas</span>
+        </div>
+
+        <div class="menu-item">
+            <img src="https://via.placeholder.com/150" alt="Ambulancia">
+            <span>Solicitar Ambulancia</span>
+        </div>
+        
+        <div class="menu-item">
+            <img src="https://via.placeholder.com/150" alt="Citas">
+            <span>Gestión de Citas</span>
+        </div>
+
+        <div class="menu-item">
+            <img src="https://via.placeholder.com/150" alt="Farmacia">
+            <span>Solicitud de Farmacia</span>
+        </div>
+    </div>
+
+    <div class="tab-bar">
+        <div class="tab-item">🏥</div>
+        <div class="tab-item">📋</div>
+        <div class="tab-item">💬</div>
+        <div class="tab-item">👥</div>
+    </div>
+
+</body>
+  </html>
